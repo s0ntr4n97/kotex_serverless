@@ -1,0 +1,16 @@
+{
+  "name": "kotex_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node functions/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parser": "^2.3.3",
+    "express": "^4.17.1"
+  }
+}
