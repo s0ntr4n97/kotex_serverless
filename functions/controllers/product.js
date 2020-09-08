@@ -28,7 +28,7 @@ exports.getProductsByCateoryId = async (req, res) => {
     subCateIds.push(data['category_id']);
   })
 
-  const prodSnapshot = await productsRef.where('category_id', 'in', subCateIds).limitToLast(limit).get();
+  const prodSnapshot = await productsRef.where('category_id', 'in', subCateIds).limit(limit).get();
   const products = [];
 
   prodSnapshot.forEach(doc => {
