@@ -15,7 +15,7 @@ const productControllers = require('./controllers/product');
 api.get('/category/:cateId/sub-category', categoryControllers.getSubCategories);
 api.get('/category/:cateId/sub-category/:subCateId/product', productControllers.getProductsBySubCategoryId);
 api.get('/category/:cateId/product', productControllers.getProductsByCateoryId);
-
+api.get('/category', categoryControllers.getAllCategories);
 
 exports.api = functions.https.onRequest(api);
 

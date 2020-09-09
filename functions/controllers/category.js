@@ -13,3 +13,14 @@ exports.getSubCategories = async (req, res) => {
 
   res.status(200).send(JSON.stringify(cates));
 }
+
+exports.getAllCategories = async (req, res) => {
+  const snapshot = await catesRef.get();
+  const cates = [];
+  snapshot.forEach(doc => {
+    const data = doc.data();
+    cates.push(data);
+  });
+
+  res.status(200).send(JSON.stringify(cates));
+}
